@@ -1,0 +1,96 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Resume</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000, #333, #777);
+      margin: 0;
+      padding: 20px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+    iframe {
+      width: 90%;
+      height: 90vh;
+      border: none;
+      margin-top: 30px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: #FFD1DC;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+  /* Blobs */
+  .blob {
+     position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #8a2be2, #0a0a0a);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 20s ease-in-out infinite;
+    }
+    .blob:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .blob:nth-child(2) { width: 400px; height: 400px; bottom: 20%; right: 5%; }
+
+    @keyframes float {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-50px) scale(1.05); }
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #3c3a3a;
+      opacity: 0.7;
+      width: 100%;
+      text-align: center;
+    }
+    .page-wrapper {
+  min-height: 100vh;
+  padding-bottom: 80px; /* ensures footer doesn't overlap content */
+  position: relative;
+  z-index: 1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Blobs -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+  <h1 style="font-family: cursive;">My Resume</h1>
+  <iframe src="Neelamma Shabadi.pdf.pdf"></iframe>
+
+  <div class="back-button">
+    <a href="portfolio.html">&larr; Back to Home</a>
+  </div>
+  <footer>Crafted with ❤️ by Neelu</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #000000, #222222, #444444, #888888);
+      color: #fff;
+      padding: 50px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 60px; /* Fix bottom shadow cut-off */
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .project-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFD1DC;
+      margin-bottom: 10px;
+    }
+    .project-description {
+      font-size: 14px;
+      color: #e0e0e0;
+    }
+
+    .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: #FFD1DC;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+  /* Blobs */
+  .blob {
+     position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #8a2be2, #0a0a0a);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 20s ease-in-out infinite;
+    }
+    .blob:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .blob:nth-child(2) { width: 400px; height: 400px; bottom: 20%; right: 5%; }
+
+    @keyframes float {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-50px) scale(1.05); }
+    }
+     /* SVG Wave at Bottom */
+     .wave {
+    position: absolute;
+    bottom: 0; /* Ensure it is at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 0;
+    }
+    footer {
+    position: absolute;
+    bottom: 20px; /* Keep it at the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 0.9rem;
+    color: #3c3a3a;
+    opacity: 0.7;
+    text-align: center;
+    width: 100%;
+   }
+
+  </style>
+</head>
+<body>
+    <!-- Blobs -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+  <h1 style="font-family: cursive;">My Projects</h1>
+  <div class="projects-container">
+    <div class="project-card", style="font-family: cursive;">
+      <div class="project-title">App-Based Field Monitoring</div>
+      <div class="project-description">An IoT Android app for real-time monitoring of soil, moisture, and temperature with smart irrigation suggestions.</div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">Proctored Exam Tool</div>
+      <div class="project-description">AI-driven online exam tool that detects devices and additional persons, built using Django.</div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">Customer Journey Analysis</div>
+      <div class="project-description">A clustering and dimensionality reduction model to improve user experience through behavioral analysis.</div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">Tic Tac Toe (Python)</div>
+      <div class="project-description">Classic two-player game with minimal design and logic implementation in Python.</div>
+    </div>
+  </div>
+
+  <div class="back-button", style="font-family: cursive;">
+    <a href="portfolio.html">&larr; Back to Home</a>
+  </div>
+   <!-- SVG Wave -->
+   <div class="wave">
+    <svg viewBox="0 0 1440 320" width="100%" height="100%">
+      <path fill="#888" fill-opacity="1"
+        d="M0,160L40,165.3C80,171,160,181,240,181.3C320,181,400,171,480,176C560,181,640,203,720,213.3C800,224,880,224,960,213.3C1040,203,1120,181,1200,160C1280,139,1360,117,1400,106.7L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <footer>Crafted with ❤️ by Neelu</footer>
+</body>
+</html>
